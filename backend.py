@@ -68,7 +68,7 @@ async def manual_input(request: FantasyRequest):
 
     # Call Gemini
     response = client.models.generate_content(
-        model="gemini-2.0-flash-exp",
+        model="gemini-2.0-flash",
         contents=prompt
     )
 
@@ -107,7 +107,7 @@ async def upload_image(file: UploadFile = File(...)):
 
     # STEP 4 — Call Gemini Vision model
     response = client.models.generate_content(
-        model="gemini-2.0-flash-exp",
+        model="gemini-2.0-flash",
         contents=[prompt, gemini_uploaded_file]
     )
 
